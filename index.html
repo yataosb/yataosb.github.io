@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>喜欢吗老弟</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div>
+        <h1>喜欢吗</h1>
+        <video controls src="/assets/32e6fc806ccc08a706ee3c027a25a22e.mp4"></video>
+        <h1 id="aaa">喜欢吗, 要不要加哥哥的WX</h1>
+        <h1 id="aaa2" style="color: yellow;">喜欢吗, 要不要加哥哥的WX</h1>
+        <h1 id="aaa3">喜欢吗, 要不要加哥哥的WX</h1>
+        <h1 id="aaa4" style="color: yellow;">喜欢吗, 要不要加哥哥的WX</h1>
+        <h1 id="aaa5">喜欢吗, 要不要加哥哥的WX</h1>
+        <img src="/assets/41bd56391a74597bdd4155aa4680ee4.jpg" />
+    </div>
+
+    <script>
+        var r = confirm("是否已满18岁");
+        if (r != true) {
+            close()
+        }
+
+        const headings = document.querySelectorAll("h1");
+
+        function toggleColor() {
+            headings.forEach(heading => {
+                heading.style.color = heading.style.color === "yellow" ? "red" : "yellow";
+            });
+            setTimeout(toggleColor, 200);
+        }
+
+        setTimeout(toggleColor, 500);
+    </script>
+</body>
+
+</html>
